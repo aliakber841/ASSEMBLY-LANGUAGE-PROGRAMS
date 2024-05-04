@@ -15,10 +15,10 @@
     MOV BX,CX  ;bx=5
     
     star2:
-    MOV AH,02H    
+    MOV AH,02H ;for displaying output   
     INT 21H
-    loop star2
-    MOV AH, 09H
+    loop star2  
+    MOV AH, 09H ;display ascii strings like /n. string must be terminated with $ sign
     LEA DX, newLine
     INT 21h
     MOV CX,BX   ;cx=5
